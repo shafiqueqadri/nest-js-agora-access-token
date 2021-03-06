@@ -5,8 +5,9 @@ import { config as dotEnvConfig } from "dotenv";
 const path = require('path');
 import { UnprocessableEntityException, ValidationPipe } from '@nestjs/common';
 import { ValidationFormatter } from './helpers';
-//dotEnvConfig();
-require('dotenv').config({ path: path.join(__dirname, '..','.env') });
+dotEnvConfig();
+
+// require('dotenv').config({ path: path.join(__dirname, '..','.env') });
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
